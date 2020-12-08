@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanzados - Funciones asincronas</title>
+</head>
+<body>
+ 
+    <main class="wrapper-main">
+
+    </main>
+
+    <script type="module">
+
+        //importo el modulo temporizador
+        import * as tiempo from "./temporizador.js";
+
+        //Creo dos elementos parrafo y los agrego al contendor principal
+        let contenedor = document.querySelector("main.wrapper-main");
+        let parragrafo1 = document.createElement("p");
+        let parragrafo2 = document.createElement("p");
+        contenedor.appendChild(parragrafo1);
+        contenedor.appendChild(parragrafo2);
+
+        //Llamo a la funcion exportable del temporizador
+        tiempo.cuenta(6, parragrafo1);
+        tiempo.cuenta(60, parragrafo2, 100, () => {parragrafo2.textContent = 'FIN'});
+    </script>
+</body>
+</html>
