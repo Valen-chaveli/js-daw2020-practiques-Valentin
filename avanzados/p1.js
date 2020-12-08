@@ -14,7 +14,6 @@ function tiempo(temp) {
   });
   return promesa;
 }
-
 //Si la promesa se cumple crea un elementro <p> en el body con un mensaje de exito
 //Si no, mensaje de error
 tiempo(5000)
