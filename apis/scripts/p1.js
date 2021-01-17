@@ -7,6 +7,7 @@ const pusuarioGuardado = document.querySelector('#nombreGuardado');
 window.addEventListener('keyup', (event) => {
   if (event.keyCode === 13) {
     guardarUsuario();
+    mostrarMensaje();
   }
 });
 
@@ -33,4 +34,12 @@ function guardarUsuario() {
 function mostrarUsuario() {
   let usuarioGuardado = sessionStorage.getItem('usuario');
   pusuarioGuardado.textContent = usuarioGuardado;
+}
+
+/**
+ * Muestra mensaje al usuario que tiene que refresacar la pagina para ver los cambios
+ */
+function mostrarMensaje() {
+  const mensaje = document.querySelector('#mensaje');
+  mensaje.textContent = 'Refresca la ventana para ver el usuario guardado';
 }
