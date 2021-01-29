@@ -6,15 +6,26 @@ $(() => {
 
   $('ul#selected-plays > li > ul').addClass('sub-level');
 
-  $('ul:nth-child(1)').parent('li').addClass('big-letter');
+  //Primera letra del los elementos de nivel superior
+  $(' ul.clear-after > li').addClass('big-letter');
 
   //Links
+
+  //Links que su href empiece por mailto
   $('a[href^=mailto]').addClass('mailto');
+
+  //Links que su href termine en pdf
   $('a[href$=pdf]').addClass('pdflink');
+
+  //Links en el cual su href empiece en http y contengan la palabra henry
   $('a[href^=http], a[href~="henry"').addClass('henrylink');
 
   //Tabla
+
+  //Filas impares hijas de una tabla
   $('table tr:nth-child(odd)').addClass('alt');
+
+  //Obras que contengan la palabra Henry
   $('table tr td:contains("Henry")').addClass('highlight');
 
   //---------------------------------------
