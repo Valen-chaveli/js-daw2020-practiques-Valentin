@@ -2,7 +2,7 @@
 $(() => {
   let btn = $('#button1');
 
-  btn.click(() => {
+  btn.one('click', () => {
     let contenedorSegundo = $('body').find('.div');
     let contenedorTercero = $('body').find('div').last();
     let numElementos = contenedorSegundo.children().length;
